@@ -1,9 +1,9 @@
 class Solution {
     fun containsDuplicate(nums: IntArray): Boolean {
-        val record: MutableMap<Int, Int> = mutableMapOf()
+        val record: MutableSet<Int> = mutableSetOf()
         nums.forEach {
-            record[it] = record.getOrDefault(it, 0) + 1
-            if (record.getOrDefault(it, 0) > 1) return true
+            if(record.contains(it)) return true
+            record.add(it)
         }
         return false
     }
