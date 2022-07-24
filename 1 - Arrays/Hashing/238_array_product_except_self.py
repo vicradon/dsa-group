@@ -17,7 +17,7 @@ class Solution:
             
         return result
 
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf2(self, nums: List[int]) -> List[int]:
         # O(1) Space ; O(N) Time
         result = [1]*len(nums)
         right_product = 1
